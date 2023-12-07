@@ -141,7 +141,7 @@ source "$OSH"/oh-my-bash.sh
 # Example aliases
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
-[ -f $HOME/.aliases ] && source .aliases
-[ -f $HOME/.exports ] && source .exports
+[ -f $HOME/.aliases ] && source $HOME/.aliases
+[ -f $HOME/.exports ] && source $HOME/.exports
 
 eval "$(starship init bash)"
