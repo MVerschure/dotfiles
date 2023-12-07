@@ -11,11 +11,11 @@ cd $HOME
 
 # spacevim setup
 ln -sf $DOTFILES/SpaceVim $HOME/.vim
-ln -sf $DOTFILES/.SpaceVim.d $HOME/.SpaceVim.d
+ln -sf $DOTFILES/.SpaceVim.d $HOME/
 
 # setup git
-ln -sf $DOTFILES/.gitconfig $HOME/.gitconfig
-ln -sf $DOTFILES/.gitexcludes $HOME/.gitexcludes
+ln -sf $DOTFILES/.gitconfig $HOME/
+ln -sf $DOTFILES/.gitexcludes $HOME/
 
 # powerline fonts for zsh agnoster theme
 git clone https://github.com/powerline/fonts.git
@@ -25,8 +25,8 @@ cd .. && rm -rf fonts
 
 # oh-my-bash & plugins
 cat $DOTFILES/.bashrc >> $HOME/.bashrc
-ln -sf $DOTFILES/.aliases $HOME/.aliases
-ln -sf $DOTFILES/.oh-my-bash $HOME/.oh-my-bash
+ln -sf $DOTFILES/.aliases $HOME/
+ln -sf $DOTFILES/.oh-my-bash $HOME/
 
 # setup starship
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
