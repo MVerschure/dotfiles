@@ -28,6 +28,12 @@ cat $DOTFILES/.bashrc >> $HOME/.bashrc
 ln -sf $DOTFILES/.aliases $HOME/
 ln -sf $DOTFILES/.oh-my-bash $HOME/
 
+# setup ble.sh
+sudo apt-get update
+sudo apt-get install -y gawk
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
+make -C ble.sh install PREFIX=$HOME/.local
+
 # setup starship
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DroidSansMono.zip
 unzip DroidSansMono.zip -d $HOME/.fonts
