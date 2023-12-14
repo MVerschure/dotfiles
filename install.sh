@@ -17,12 +17,6 @@ ln -sf $DOTFILES/.SpaceVim.d $HOME/
 ln -sf $DOTFILES/.gitconfig $HOME/
 ln -sf $DOTFILES/.gitexcludes $HOME/
 
-# powerline fonts for zsh agnoster theme
-git clone https://github.com/powerline/fonts.git
-cd fonts
-./install.sh
-cd .. && rm -rf fonts
-
 # oh-my-bash & plugins
 cat $DOTFILES/.bashrc >> $HOME/.bashrc
 ln -sf $DOTFILES/.aliases $HOME/
@@ -42,5 +36,6 @@ fc-cache -fv
 curl -sS https://starship.rs/install.sh -o starship.sh 
 chmod +x starship.sh
 sudo ./starship.sh -y
+mkdir -p $HOME/.config
 starship preset pastel-powerline > $HOME/.config/starship.toml
 rm -f starship.sh
