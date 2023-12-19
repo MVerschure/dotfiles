@@ -37,5 +37,5 @@ curl -sS https://starship.rs/install.sh -o starship.sh
 chmod +x starship.sh
 sudo ./starship.sh -y
 mkdir -p $HOME/.config
-starship preset pastel-powerline > $HOME/.config/starship.toml
+ln -sf $DOTFILES/starship.toml $HOME/.config/
 rm -f starship.sh
