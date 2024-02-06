@@ -1,10 +1,6 @@
-[submodule "private"]
-    path = private
-	url = git@github.com:erichlf/dotfiles-private.git
-	branch = master
 [submodule ".oh-my-bash"]
-	path = .oh-my-bash
+	path = my-home/.oh-my-bash
 	url = https://github.com/ohmybash/oh-my-bash.git
 [submodule "SpaceVim"]
-	path = SpaceVim
+	path = my-home/.vim
 	url = https://gitlab.com/SpaceVim/SpaceVim.git
