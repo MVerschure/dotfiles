@@ -10,6 +10,7 @@ git submodule update
 sudo apt-get update
 sudo apt-get install stow wget unzip -y
 stow -v --adopt --dir $DOTFILES_DIR --target $HOME --stow my-home
+cat $DOTFILES_DIR/.bashrc >> $HOME/.bashrc
 # if the adopt made a local change then undo that
 git checkout HEAD -- starship my-home
 
