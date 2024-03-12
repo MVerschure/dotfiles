@@ -144,5 +144,3 @@ done
 setopt nonomatch
 
 eval "$(starship init zsh)"
-
-bash /etc/profile.d/10-retropie.sh
