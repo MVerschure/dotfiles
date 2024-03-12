@@ -141,6 +141,9 @@ done
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [ -d $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin"
 
+# ros setup
+[ -f /opt/ros/$ROS_DISTRO/setup.zsh  ] && source /opt/ros/$ROS_DISTRO/setup.zsh
+
 setopt nonomatch
 
 eval "$(starship init zsh)"
