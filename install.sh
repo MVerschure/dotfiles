@@ -25,3 +25,5 @@ curl -sS https://starship.rs/install.sh -o starship.sh
 chmod +x starship.sh
 sudo ./starship.sh -y
 rm -f starship.sh
+
+sudo apt-get install -y fzf
