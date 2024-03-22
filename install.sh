@@ -9,6 +9,10 @@ git submodule update
 
 sudo apt-get update
 sudo apt-get install stow wget unzip -y
+
+# rm a rogue oh-my-zsh
+[ -d $HOME/.oh-my-zsh ] && [ ! -L $HOME/.oh-my-zsh ] && rm -rf $HOME/.oh-my-zsh
+
 mkdir -p $HOME/.config
 stow -v --adopt --dir $DOTFILES_DIR --target $HOME --stow my-home
 stow -v --adopt --dir $DOTFILES_DIR --target $HOME/.config/ --stow starship

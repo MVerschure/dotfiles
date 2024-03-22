@@ -140,7 +140,7 @@ done
 
 # ros setup
 [ -f /opt/ros/$ROS_DISTRO/setup.zsh  ] && source /opt/ros/$ROS_DISTRO/setup.zsh
-[ -f /home/ros/tesseract_ws/devel/setup.zsh ] && source /home/ros/tesseract_ws/devel/setup.bash
+[ -f /home/ros/tesseract_ws/devel/setup.zsh ] && source /home/ros/tesseract_ws/devel/setup.zsh
 
 setopt nonomatch
 
