@@ -20,3 +20,10 @@ fi
 
 export PATH="$PATH:~/.local/bin"
 
+# PENELOPE
+[ -d $DEV_WORKSPACE/.ccache ] && \
+    export PATH="/usr/lib/ccache:$PATH" && \
+    export CCACHE_DIR="${DEV_WORKSPACE}/.ccache"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[ -d $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin"

@@ -138,11 +138,9 @@ done
 [ -f ~/.exports ] && source ~/.exports
 [ -f ~/.aliases ] && source ~/.aliases
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[ -d $HOME/.rvm ] && export PATH="$PATH:$HOME/.rvm/bin"
-
 # ros setup
 [ -f /opt/ros/$ROS_DISTRO/setup.zsh  ] && source /opt/ros/$ROS_DISTRO/setup.zsh
+[ -f /home/ros/tesseract_ws/devel/setup.zsh ] && source /home/ros/tesseract_ws/devel/setup.bash
 
 setopt nonomatch
 

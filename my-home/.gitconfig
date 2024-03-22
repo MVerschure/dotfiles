@@ -26,7 +26,7 @@
     changed = green
     untracked = cyan
 [credential]
-	helper = "!f() { /home/ros/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/node /tmp/vscode-remote-containers-dbff9deb-0c6c-480a-98e1-fac7758568e9.js git-credential-helper $*; }; f"
+	helper = "!f() { /home/ros/.vscode-server/bin/863d2581ecda6849923a2118d93a088b0745d9d6/node /tmp/vscode-remote-containers-428bdf67-1d0a-4311-b169-9f3c6091f1a0.js git-credential-helper $*; }; f"
 [merge]
     tool = meld
 [merge "tool.meld"]
