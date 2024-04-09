@@ -14,8 +14,9 @@ sudo apt-get install stow wget unzip -y
 #[ -d $HOME/.oh-my-zsh ] && [ ! -L $HOME/.oh-my-zsh ] && rm -rf $HOME/.oh-my-zsh
 
 mkdir -p $HOME/.config
-stow -v --adopt --dir $DOTFILES_DIR --target $HOME --stow my-home
+#stow -v --adopt --dir $DOTFILES_DIR --target $HOME --stow my-home
 stow -v --adopt --dir $DOTFILES_DIR --target $HOME/.config/ --stow starship
+stow -v --adopt --dir $DOTFILES_DIR --target $HOME/.config/ --stow config
 #stow -v --adopt --dir $DOTFILES_DIR --target $HOME/.oh-my-zsh/custom/plugins/ --restow zsh
 # if the stow adopt made a local change then undo that
 git checkout HEAD -- starship my-home
