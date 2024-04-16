@@ -11,6 +11,23 @@ sudo apt-get update
 sudo apt-get install stow wget unzip -y
 
 # Setup LVIM
+# installing rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# installing nodejs
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
+export NODE_MAJOR=20
+echo "deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt update
+sudo apt install nodejsi
+
+# Install c compiler
+sudo apt-get install gcc
+
+# Install treesitter
+cargo install tree-sitter-cli
+
+
 # installing neovim
 sudo add-apt-repository ppa:ppa-verse/neovim
 sudo apt-get update
