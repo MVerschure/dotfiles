@@ -66,17 +66,17 @@ lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {
   nil 
 }
 -- mappings["De"] = {
---   "<CMD>103TermExec cmd='devcontainer exec --workspace . zsh' dir='.'<CR>",
---   "Bring Up Terminal in Devcontainer"
+--   "<CMD>DevcontainerExec<CR>",
+--   "Execute Command in Devcontainer"
 -- }
-mappings["Dc"] = {
-  "<CMD>104TermExec cmd='colcon build --symlink-install --merge-install'<CR>",
-  "ROS2 Build"
-}
-mappings["Dt"] = {
-  "<CMD>104TermExec cmd='source install/setup.zsh && colcon test --merge-install'<CR>",
-  "ROS2 Test"
-}
+-- mappings["Dc"] = {
+--   "<CMD>104TermExec cmd='colcon build --symlink-install --merge-install'<CR>",
+--   "ROS2 Build"
+-- }
+-- mappings["Dt"] = {
+--   "<CMD>104TermExec cmd='source install/setup.zsh && colcon test --merge-install'<CR>",
+--   "ROS2 Test"
+-- }
 
 -- function launch()
 --   return "<CMD>104TermExec cmd='source install/setup.zsh && ros2 launch " .. vim.fn.input("Package:", "", "") .. vim.fn.input("Launcher:", "", "") .. "'<CMD>"
@@ -118,3 +118,6 @@ mappings["wD"] = { "<CMD>other<CR>", "Close All Other" }
 mappings["ws"] = { "<CMD>split<CR>", "Split Horizontal" }
 mappings["wt"] = { "<CMD>tab split<CR>", "Send to Tab" }
 mappings["wv"] = { "<CMD>vsplit<CR>", "Split Vertical" }
+
+-- Focus on explorer
+mappings["0"] = { "<CMD>NvimTreeFocus<CR>", "Focus Explorer" }

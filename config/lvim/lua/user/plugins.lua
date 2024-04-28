@@ -21,38 +21,49 @@ lvim.plugins = {
   {"github/copilot.vim"},
 
   -- devctontainer management
-  -- {
-  --   "arnaupv/nvim-devcontainer-cli",
-  --   branch = "main",
-  --   opts = {
-  --     -- By default, if no extra config is added, following nvim_dotfiles are
-  --     -- installed: "https://github.com/LazyVim/starter"
-  --     -- This is an example for configuring other nvim_dotfiles inside the docker container
-  --     system_environment_repo = "https://github.com/MVerschure/dotfiles.git",
-  --     system_environment_directory = "dotfiles",
-  --     system_environment_install_command = "./install.sh",
-  --     nvim_dotfiles_repo = "",
-  --     nvim_dotfiles_branch = "",
-  --     nvim_dotfiles_directory = "",
-  --     nvim_dotfiles_install_command = "",
-  --     -- In case you want to change the way the devenvironment is setup, you can also provide your own setup
-  --     -- setup_environment_repo = "https://github.com/arnaupv/setup-environment",
-  --     -- setup_environment_install_command = "./install.sh -p 'nvim stow zsh'",
-  --   },
-  --   keys = {
-  --     -- stylua: ignore
-  --     {
-  --       "<leader>Du",
-  --       "<CMD>DevcontainerUp<CR>",
-  --       desc = "Bring Up the DevContainer",
-  --     },
-  --     {
-  --       "<leader>Dc",
-  --       "<CMD>DevcontainerConnect<CR>",
-  --       desc = "Connect to DevContainer",
-  --     },
-  --     }
-  -- },
+  {
+    "erichlf/nvim-devcontainer-cli",
+    branch = "main",
+    opts = {
+      -- By default, if no extra config is added, following nvim_dotfiles are
+      -- installed: "https://github.com/LazyVim/starter"
+      -- This is an oexample for configuring other nvim_dotfiles inside the docker container
+      dotfiles_repository = "https://github.com/MVerschure/dotfiles.git",
+      dotfiles_targetPath = "~/dotfiles",
+      dotfiles_installCommand = "./install.sh",
+      -- In case you want to change the way the devenvironment is setup, you can also provide your own setup
+      -- setup_environment_repo = "https://github.com/arnaupv/setup-environment",
+      -- setup_environment_install_command = "./install.sh -p 'nvim stow zsh'",
+    },
+    keys = {
+        -- stylua: ignore
+        {
+          "<leader>Du",
+          "<CMD>DevcontainerUp<CR>",
+          desc = "Bring up the DevContainer",
+        },
+        {
+          "<leader>Dc",
+          "<CMD>DevcontainerConnect<CR>",
+          desc = "Connect to DevContainer",
+        },
+        {
+          "<leader>De",
+          "<CMD>DevcontainerExec<CR>",
+          desc = "Execute a command in DevContainer",
+        },
+        {
+          "<leader>Db",
+          "<CMD>DevcontainerExec colcon build --symlink-install --merge-install<CR>",
+          desc = "Execute build command in DevContainer",
+        },
+        {
+          "<leader>Dt",
+          "<CMD>DevcontainerExec source install/setup.bash && colcon --merge-install test<CR>",
+          desc = "Execute test command in DevContainer",
+        },
+     }
+  },
 
   -- fine command
   {
