@@ -32,10 +32,5 @@ chmod +x starship.sh
 sudo ./starship.sh -y
 rm -f starship.sh
 
-#Install neovim
-add_ppa ppa-verse/core
-apt_update
-apt_install neovim
-
 echo "source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash" >> $HOME/.bashrc
 echo 'eval "$(starship init bash)"' >> $HOME/.bashrc
